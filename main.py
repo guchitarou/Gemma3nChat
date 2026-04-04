@@ -3,26 +3,29 @@ from PIL import Image
 import requests
 import torch
 
-model_id = "./modelWights"
+model_id = "./model_weights"
 
 dtype = torch.bfloat16
 
-model = Gemma3nForConditionalGeneration.from_pretrained(model_id, device_map="auto", torch_dtype=dtype,).eval()
-
+model = Gemma3nForConditionalGeneration.from_pretrained(
+    model_id,
+    device_map="auto",
+    torch_dtype=dtype,
+).eval()
 processor = AutoProcessor.from_pretrained(model_id)
 
 messages = [
     {
         "role": "system",
-        "content": [{"type": "text", "text": "You are a helpful assistant."}]
+        "content": [{"type": "text", "text": "You are a helpful assistant."}],
     },
     {
         "role": "user",
         "content": [
             {"type": "image", "image": "./bee.jpg"},
-            {"type": "text", "text": "画像を説明してほしいお"}
-        ]
-    }
+            {"type": "text", "text": "入力した画像について説明してほしいお"},
+        ],
+    },
 ]
 
 inputs = processor.apply_chat_template(
@@ -44,7 +47,3 @@ decoded = processor.decode(generation, skip_special_tokens=True)
 
 print("出力は👇")
 print(decoded)
-
-# **Overall Impression:** The image is a close-up shot of a vibrant garden scene,
-# focusing on a cluster of pink cosmos flowers and a busy bumblebee.
-# It has a slightly soft, natural feel, likely captured in daylight.
