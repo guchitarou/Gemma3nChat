@@ -1,6 +1,6 @@
 # Gemma3nChat
 Gemma3n4bモデルを使ったChat
-![動作確認](desc_img\Gemma3nChat.gif)
+![動作確認](./desc_img/Gemma3nChat.gif)
 
 ## 環境構築
 環境構築に関しては下記の資料を参照。
