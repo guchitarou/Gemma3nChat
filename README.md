@@ -1,5 +1,5 @@
 # Gemma3nChat
-Gemma3n4bモデルを使ったChat
+Gemma3n-4b-itモデルを使ったChat
 ![動作確認](./desc_img/Gemma3nChat.gif)
 
 ## 環境構築
