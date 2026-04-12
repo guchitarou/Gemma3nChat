@@ -179,8 +179,9 @@ pip install -U "huggingface_hub[cli]"
 pip install -r requirements.txt
 ```
 
+## モデルの格納
 ### HuggingFaceにログイン
-手動でダウンロードして Runpod 上に配置する手間を省くため、コマンドで格納する。
+手動でモデルをダウンロードして Runpod 上に配置するのは時間がかかる。この手間を省くため、コマンドで格納する。
 
 HuggingFaceにターミナル上でログインする。
 ```
