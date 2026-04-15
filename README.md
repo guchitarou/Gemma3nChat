@@ -46,7 +46,7 @@ You can suppress this exception and fall back to eager by setting:
 export TORCH_COMPILE_DISABLE=1
 ```
 ## ChatAPP使い方
-基本的な使い方は、下記のとおりです。
+基本的な使い方は、下記の通りである。
 ![動作確認](./desc_img/Gemma3nChat.gif)
 
 画像に関してもドラックアンドドロップで読み込ませることができます。
